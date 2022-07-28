@@ -771,8 +771,8 @@ namespace OBSWebsocketDotNet
                 case "SourceAudioSyncOffsetChanged":
                     SourceAudioSyncOffsetChanged?.Invoke(this, (string)body["sourceName"], (int)body["syncOffset"]);
                     break;
-                case "SourceCreated":
-                    SourceCreated?.Invoke(this, new SourceSettings(body));
+                case "InputCreated":
+                    SourceCreated?.Invoke(this, new SourceSettings((string)body["inputName"], body));
                     break;
                 case "SourceDestroyed":
                     SourceDestroyed?.Invoke(this, (string)body["sourceName"], (string)body["sourceType"], (string)body["sourceKind"]);
