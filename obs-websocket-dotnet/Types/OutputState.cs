@@ -23,6 +23,14 @@
         /// <summary>
         /// The output is completely stopped
         /// </summary>
-        Stopped
+        Stopped,
+        //#TODO doc
+        Reconnecting,
+        //#TODO doc
+        Paused,
+        //#TODO doc
+        Resumed,
+        //#TODO doc
+        Unknown
     }
 }
